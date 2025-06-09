@@ -11,7 +11,7 @@ public class TwoPointers {
                     maxIdx = j;
                 }
             }
-            // Swap arr[i] and arr[maxIdx]
+            
             int temp = arr[i];
             arr[i] = arr[maxIdx];
             arr[maxIdx] = temp;
