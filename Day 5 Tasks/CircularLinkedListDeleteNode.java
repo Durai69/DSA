@@ -1,7 +1,7 @@
 package addon;
 
 public class CircularLinkedListDeleteNode {
-    // Node class for the circular linked list
+   
     static class Node {
         int data;
         Node next;
@@ -12,12 +12,12 @@ public class CircularLinkedListDeleteNode {
 
     Node head = null;
 
-    // Insert data at the end of the circular linked list
+   
     public void insert(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
-            newNode.next = head; // Single node points to itself
+            newNode.next = head; 
         } else {
             Node temp = head;
             while (temp.next != head) {
@@ -28,7 +28,6 @@ public class CircularLinkedListDeleteNode {
         }
     }
 
-    // Delete the first node found with the given key
     public void delete(int key) {
         if (head == null) {
             System.out.println("List is empty.");
@@ -37,14 +36,14 @@ public class CircularLinkedListDeleteNode {
 
         Node curr = head, prev = null;
 
-        // Case 1: head node holds the key
+      
         if (head.data == key) {
-            // Only one node
+           
             if (head.next == head) {
                 head = null;
                 return;
             }
-            // More than one node
+            
             Node last = head;
             while (last.next != head) {
                 last = last.next;
@@ -54,7 +53,7 @@ public class CircularLinkedListDeleteNode {
             return;
         }
 
-        // Case 2: node to delete is not the head
+       
         do {
             prev = curr;
             curr = curr.next;
@@ -67,7 +66,7 @@ public class CircularLinkedListDeleteNode {
         System.out.println("Node with data " + key + " not found.");
     }
 
-    // Display the circular linked list
+    
     public void display() {
         if (head == null) {
             System.out.println("List is empty.");
