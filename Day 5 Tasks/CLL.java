@@ -2,15 +2,15 @@ package addon;
 
 public class CLL {
 Node head = null;
-    // Method to insert a node at the end of the circular linked list
+ 
     public void insert(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
-            newNode.next = head; // Point next to itself to form a circle
+            newNode.next = head; 
         } else {
             Node temp = head;
-            // Traverse to last node
+            
             while (temp.next != head) {
                 temp = temp.next;
             }
@@ -19,7 +19,7 @@ Node head = null;
         }
     }
 
-    // Method to display the circular linked list
+    
     public void display() {
         if (head == null) {
             System.out.println("List is empty.");
