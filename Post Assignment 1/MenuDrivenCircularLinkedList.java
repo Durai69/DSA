@@ -14,7 +14,7 @@ package addon;
 
     Node head = null;
 
-    // Insert at head
+  
     public void insertAtHead(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -22,7 +22,7 @@ package addon;
             newNode.next = head;
         } else {
             Node temp = head;
-            // Traverse to last node
+            
             while (temp.next != head) {
                 temp = temp.next;
             }
@@ -33,7 +33,6 @@ package addon;
         System.out.println(data + " inserted at head.");
     }
 
-    // Insert at tail
     public void insertAtTail(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -50,7 +49,7 @@ package addon;
         System.out.println(data + " inserted at tail.");
     }
 
-    // Delete node with specific value
+   
     public void deleteNode(int key) {
         if (head == null) {
             System.out.println("List is empty.");
@@ -58,7 +57,7 @@ package addon;
         }
         Node curr = head, prev = null;
 
-        // Case 1: head node holds the key
+        
         if (head.data == key) {
             if (head.next == head) {
                 head = null;
@@ -75,7 +74,7 @@ package addon;
             return;
         }
 
-        // Case 2: node to delete is not head
+        
         do {
             prev = curr;
             curr = curr.next;
@@ -89,7 +88,7 @@ package addon;
         System.out.println("Node with data " + key + " not found.");
     }
 
-    // Display the list
+  
     public void display() {
         if (head == null) {
             System.out.println("List is empty.");
