@@ -1,7 +1,7 @@
 package addon;
 
 public class CircularLinkedListInsertHead {
-    // Node class for the circular linked list
+    
     static class Node {
         int data;
         Node next;
@@ -12,25 +12,25 @@ public class CircularLinkedListInsertHead {
 
     Node head = null;
 
-    // Insert data at the head of the circular linked list
+    
     public void insertAtHead(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
-            newNode.next = head; // Single node points to itself
+            newNode.next = head;
         } else {
             Node temp = head;
-            // Traverse to last node to update its next pointer
+        
             while (temp.next != head) {
                 temp = temp.next;
             }
-            temp.next = newNode;   // Last node points to new head
-            newNode.next = head;   // New node points to old head
-            head = newNode;        // Update head to new node
+            temp.next = newNode; 
+            newNode.next = head;  
+            head = newNode;        
         }
     }
 
-    // Display the circular linked list
+    
     public void display() {
         if (head == null) {
             System.out.println("List is empty.");
