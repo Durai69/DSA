@@ -1,7 +1,7 @@
 package addon;
 
 public class CircularLinkedListInsertTail {
-    // Node class for the circular linked list
+    
     static class Node {
         int data;
         Node next;
@@ -13,21 +13,21 @@ public class CircularLinkedListInsertTail {
     Node head = null;
     Node tail = null;
 
-    // Insert data at the tail of the circular linked list
+   
     public void insertAtTail(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
             tail = newNode;
-            newNode.next = head; // Point next to itself for one node
+            newNode.next = head;
         } else {
-            tail.next = newNode; // Current tail's next points to new node
-            tail = newNode; // Update tail
-            tail.next = head; // Tail's next points to head to keep it circular
+            tail.next = newNode; 
+            tail = newNode; 
+            tail.next = head; 
         }
     }
 
-    // Display the circular linked list
+   
     public void display() {
         if (head == null) {
             System.out.println("List is empty.");
