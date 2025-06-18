@@ -10,12 +10,12 @@ CREATE TABLE Students (
 ALTER TABLE Students
 ADD COLUMN Age VARCHAR(255);
 
-INSERT INTO Students (StudentName, Marks, Department, Section) VALUES
-('Durai', 85, 'Computer Application', 'C'),
-('Bharath', 92, 'Computer Application', 'B'),
-('Faizal', 78, 'Computer Application', 'C'),
-('Surya', 95, 'Computer Application', 'C'),
-('Dilli', 88, 'Computer Science', 'C');
+INSERT INTO Students (StudentID, StudentName, Marks, Department, Section) VALUES
+(1, 'Durai', 85, 'Computer Application', 'C'),
+(2, 'Bharath', 92, 'Computer Application', 'B'),
+(3, 'Faizal', 78, 'Computer Application', 'C'),
+(4, 'Surya', 95, 'Computer Application', 'C'),
+(5, 'Dilli', 88, 'Computer Science', 'C');
 
 UPDATE Students
 SET Age = '16'
