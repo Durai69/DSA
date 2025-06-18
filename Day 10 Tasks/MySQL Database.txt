@@ -1,3 +1,4 @@
+
 CREATE TABLE Students (
     StudentID INT,
     StudentName VARCHAR(100) NOT NULL,
@@ -17,10 +18,6 @@ INSERT INTO Students (StudentName, Marks, Department, Section) VALUES
 ('Dilli', 88, 'Computer Science', 'C');
 
 UPDATE Students
-SET StudentName = 'Robert'
-WHERE StudentID = 2;
-
-UPDATE Students
 SET Age = '16'
 WHERE StudentID = 2;
 
@@ -29,22 +26,12 @@ DELETE FROM Students WHERE StudentID = 5;
 ALTER TABLE Students
 ADD COLUMN Gender VARCHAR(244);
 
-ALTER TABLE Students
-DROP COLUMN Section;
-
-SELECT StudentID, StudentName, Marks, Department, Gender
-FROM Students
-WHERE Marks < 60;
-
-SELECT StudentName, Department, Gender
-FROM Students;
-
 SELECT StudentName, Marks, Department
 FROM Students;
 
 SELECT *
 FROM Students;
 
-TRUNCATE TABLE Students;
-
-DROP DATABASE dsa;
+SELECT StudentID, StudentName, Marks, Department
+FROM Students
+WHERE Marks < 60;
